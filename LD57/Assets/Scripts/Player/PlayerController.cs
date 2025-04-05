@@ -22,11 +22,15 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.y == 0 && moveInput.x == 0)
         {
-            anim.SetBool("isRunning", false);
+            anim.SetInteger("State", 0);
         }
-        else
+        else if (moveInput.y > 0 || moveInput.x != 0) 
         {
-            anim.SetBool("isRunning", true);
+            anim.SetInteger("State", 1);
+        }
+        else if (moveInput.y < 0)
+        {
+            anim.SetInteger("State", 2);
         }
         if (!isFacingRight && moveInput.x > 0)
         {

@@ -29,15 +29,19 @@ public class Heads : MonoBehaviour
             if (isCowHead)
             {
                 inventory.AddItem(CowHeadImage);
+                //inventory.cowIsExisting = true;
                 Destroy(gameObject);
             }
             else if (isPigHead)
             {
                 inventory.AddItem(PigHeadImage);
                 Destroy(gameObject);
+                //inventory.pigIsExisting = true;
             }
             else if (isGoutHead)
-            {   inventory.AddItem(GoutHeadImage);
+            {
+                inventory.goatIsExisting = true;
+                //inventory.AddItem(GoutHeadImage);
                 Destroy(gameObject);
             }
         }
