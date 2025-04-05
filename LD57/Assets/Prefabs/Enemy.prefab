@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5717250745512690494}
   - component: {fileID: 2770536555222294399}
   - component: {fileID: 7954413132446616699}
+  - component: {fileID: 3329538832365280879}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -80,12 +81,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1345625226, guid: 0fb5486322abd4a4c8f9c1558fd65ecf, type: 3}
+  m_Sprite: {fileID: -1958621601, guid: 2101d896ebb6fc246b44707ef3bd377e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.96875, y: 0.890625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -103,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4eeb02b8240ad2479ab7c1a6186dfd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
 --- !u!114 &-3215620244901578387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,7 +174,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3.94
+  m_Radius: 5
 --- !u!82 &2770536555222294399
 AudioSource:
   m_ObjectHideFlags: 0
@@ -305,6 +306,27 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.07761201}
   serializedVersion: 2
   m_Radius: 0.422388
+--- !u!95 &3329538832365280879
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766090178857842352}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b20239719bdb8d646abd0c47999a2f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3470204234787659899
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +376,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.8962264, g: 0.18178178, b: 0.18178178, a: 1}
-  m_Intensity: 0.2
+  m_Intensity: 0.4
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -376,7 +398,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1.16
+  m_PointLightOuterRadius: 1.73
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

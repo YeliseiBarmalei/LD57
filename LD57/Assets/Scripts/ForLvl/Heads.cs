@@ -40,8 +40,8 @@ public class Heads : MonoBehaviour
             }
             else if (isGoutHead)
             {
-                inventory.goatIsExisting = true;
-                //inventory.AddItem(GoutHeadImage);
+                //inventory.goatIsExisting = true;
+                inventory.AddItem(GoutHeadImage);
                 Destroy(gameObject);
             }
         }
