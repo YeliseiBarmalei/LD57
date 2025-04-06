@@ -44,7 +44,15 @@ public class Enemy : MonoBehaviour
         {
             //audioSource.volume += Time.deltaTime / 5;
             agent.speed = speed;
-            agent.SetDestination(target.position);
+            if (agent.isOnNavMesh)
+            {
+                agent.SetDestination(target.position);
+            }
+            else
+            {
+                Debug.LogWarning("Агент не на NavMesh!");
+            }
+
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

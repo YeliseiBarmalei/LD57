@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 961a60bb9b3a9744785f7c55dbe78755
+guid: 6251b867c5dec7e46b587855efff8b7f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: new newebebebe idle_0
+      name: New character walking_0
       rect:
         serializedVersion: 2
-        x: 15
+        x: 32
         y: 2
-        width: 27
-        height: 56
+        width: 57
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 432dfbf8674e69a47bd0b0055fe18ea3
-      internalID: 130098188
+      spriteID: 90c197947561c9c479270f7e4c6c8532
+      internalID: -32158067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_1
+      name: New character walking_1
       rect:
         serializedVersion: 2
-        x: 79
-        y: 2
-        width: 27
-        height: 57
+        x: 154
+        y: 1
+        width: 63
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b960970fbc940c44ab5c64f5dcda005
-      internalID: 283561023
+      spriteID: 89b0bc5734de10a4ba20490a933ca56f
+      internalID: 1145482429
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_2
+      name: New character walking_2
       rect:
         serializedVersion: 2
-        x: 143
-        y: 2
-        width: 27
-        height: 56
+        x: 279
+        y: 3
+        width: 71
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaf942481d58c594a948fb60c4fbace1
-      internalID: 1412478373
+      spriteID: fc2d05de3993c104fa161c6867b2b920
+      internalID: -276465659
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_3
+      name: New character walking_3
       rect:
         serializedVersion: 2
-        x: 207
+        x: 407
         y: 2
-        width: 27
-        height: 54
+        width: 74
+        height: 120
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41ba4210eba3c6545bff6d09b7e07c46
-      internalID: 1860009440
+      spriteID: 9eda8c73deab0784681ca1c7ab1cb8d3
+      internalID: 31788540
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_4
+      name: New character walking_4
       rect:
         serializedVersion: 2
-        x: 271
-        y: 2
-        width: 27
-        height: 57
+        x: 539
+        y: 3
+        width: 62
+        height: 119
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf15b918ec8fe664aa6ec9ace0661f22
-      internalID: -610732379
+      spriteID: 349dbbeb95cff4f4f8c8ce51ddd07e79
+      internalID: -1941341112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_5
+      name: New character walking_5
       rect:
         serializedVersion: 2
-        x: 335
-        y: 2
-        width: 27
-        height: 57
+        x: 673
+        y: 1
+        width: 56
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff1c61ae53385154bbdb85da7d5c4fbd
-      internalID: 1482216934
+      spriteID: 23ed8fdd248120e4887e60e764e6ca8b
+      internalID: 1252383846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_6
+      name: New character walking_6
       rect:
         serializedVersion: 2
-        x: 399
-        y: 2
-        width: 27
-        height: 54
+        x: 795
+        y: 1
+        width: 70
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 033fb7a659859bf40b76525a4faddbcd
-      internalID: -1947346647
+      spriteID: c006f4f671d38794a9711f9db96fc93d
+      internalID: -422314230
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: new newebebebe idle_7
+      name: New character walking_7
       rect:
         serializedVersion: 2
-        x: 463
-        y: 2
-        width: 27
-        height: 56
+        x: 920
+        y: 1
+        width: 71
+        height: 121
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85cf445b05bf8514b90cec1569a77d1d
-      internalID: -1172821407
+      spriteID: ba55535eb0a16914c8f5de3f719f752d
+      internalID: -1406539409
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      new newebebebe idle_0: 130098188
-      new newebebebe idle_1: 283561023
-      new newebebebe idle_2: 1412478373
-      new newebebebe idle_3: 1860009440
-      new newebebebe idle_4: -610732379
-      new newebebebe idle_5: 1482216934
-      new newebebebe idle_6: -1947346647
-      new newebebebe idle_7: -1172821407
+      New character walking_0: -32158067
+      New character walking_1: 1145482429
+      New character walking_2: -276465659
+      New character walking_3: 31788540
+      New character walking_4: -1941341112
+      New character walking_5: 1252383846
+      New character walking_6: -422314230
+      New character walking_7: -1406539409
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

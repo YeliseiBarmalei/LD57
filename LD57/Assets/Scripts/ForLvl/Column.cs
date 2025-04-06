@@ -16,8 +16,10 @@ public class Column : MonoBehaviour
     private bool addItemAble;
     private Inventory inventory;
     private bool triggerScriptIsDestroyed = false;
+    private Player player;
     private void Start()
     {
+        player = FindAnyObjectByType<Player>();
         headGameObject.SetActive(false);
         blinkingText = FindAnyObjectByType<BlinkingText>();
         inventory = FindAnyObjectByType<Inventory>();
@@ -39,6 +41,7 @@ public class Column : MonoBehaviour
             inventory.RemoveItem(inventory.goatIndex);
             Destroy(GetComponent<TriggerObject>());
             triggerScriptIsDestroyed = true;
+            player.eButton.SetActive(false);
         }
         else if (isCowColumn && inventory.cowIsExisting)
         {
@@ -46,8 +49,9 @@ public class Column : MonoBehaviour
             headGameObject.SetActive(true);
             inventory.RemoveItem(inventory.cowIndex);
             Destroy(GetComponent<TriggerObject>());
-                triggerScriptIsDestroyed = true;
-        }
+            triggerScriptIsDestroyed = true;
+            player.eButton.SetActive(false);
+            }
         else if (isPigColumn && inventory.pigIsExisting)
         {
             isActivated = true;
@@ -55,7 +59,8 @@ public class Column : MonoBehaviour
             inventory.RemoveItem(inventory.pigIndex);
             Destroy(GetComponent<TriggerObject>());
             triggerScriptIsDestroyed = true;
-        }
+            player.eButton.SetActive(false);
+            }
         else if (!inventory.pigIsExisting && !inventory.goatIsExisting && !inventory.cowIsExisting )
         {
             if (triggerScriptIsDestroyed == false)

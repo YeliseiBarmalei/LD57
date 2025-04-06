@@ -9,6 +9,11 @@ public class LeakyDoor : MonoBehaviour
     [SerializeField] private float moveDuration = 1f;
     [SerializeField] private Column[] columns;
     public bool isCloset = true;
+    private AudioSource audioSource;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (AllColumnsActivated())
@@ -28,6 +33,7 @@ public class LeakyDoor : MonoBehaviour
     }
     private void OpenDoor()
     {
+        audioSource.Play();
         transform.DOMoveX(transform.position.x - moveDistance, moveDuration);
         TurnOffColumns();
         isCloset = false;

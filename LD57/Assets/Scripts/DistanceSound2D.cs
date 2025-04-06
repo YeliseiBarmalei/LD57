@@ -18,7 +18,7 @@ public class DistanceSound2D : MonoBehaviour
         float distance = Vector2.Distance(transform.position, player.position);
 
         // Рассчитываем громкость: ближе = громче
-        float volume = 1f - Mathf.Clamp01(distance / maxDistance);
+        float volume = 0.65f - Mathf.Clamp01(distance / maxDistance);
         audioSource.volume = volume;
     }
 }

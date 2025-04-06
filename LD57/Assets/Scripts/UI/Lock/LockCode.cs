@@ -10,6 +10,8 @@ public class LockCode : MonoBehaviour
     [Header("Code")]
     public int[] correctCode = new int[4];
     public bool codeIsCorrect = false;
+    public AudioClip correctCodeClip;
+    public AudioClip incorrectCodeClip;
 
     private void Update()
     {
