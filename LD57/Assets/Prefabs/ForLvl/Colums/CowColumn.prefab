@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 6143799922879666211}
   - component: {fileID: 2472488566614619668}
   - component: {fileID: 3061630783160001861}
+  - component: {fileID: 1074517638902563957}
+  - component: {fileID: 6441287899485925590}
   m_Layer: 0
   m_Name: CowColumn
   m_TagString: Untagged
@@ -161,7 +163,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 15
   m_Sprite: {fileID: 21300000, guid: faf898a3020bc674b8c748933b975456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -205,7 +207,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.017446518, y: -0.20364153}
+  m_Offset: {x: 0.02559352, y: -0.73872805}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +218,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0818872, y: 1.6509674}
+  m_Size: {x: 1.0255095, y: 0.4405846}
   m_EdgeRadius: 0
 --- !u!114 &2472488566614619668
 MonoBehaviour:
@@ -235,7 +237,8 @@ MonoBehaviour:
   isCowColumn: 1
   isPigColumn: 0
   headGameObject: {fileID: 2919329951579672492}
-  warningText: You need a different head.
+  haveNoHeadText: Bring the head of an animal
+  differentHeadText: You need a different head
 --- !u!114 &3061630783160001861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,6 +255,63 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!61 &1074517638902563957
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639565482145107732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.0560019, y: -0.077083886}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 10.24, y: 10.24}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.482388, y: 1.9407846}
+  m_EdgeRadius: 0
+--- !u!114 &6441287899485925590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5639565482145107732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e05d840e1f1a00e41a75c8b4b860d1ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8132896659680761111
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class LeakyDoor : MonoBehaviour
     [SerializeField] private float moveDistance = 2f;
     [SerializeField] private float moveDuration = 1f;
     [SerializeField] private Column[] columns;
+    public bool isCloset = true;
     private void Update()
     {
         if (AllColumnsActivated())
@@ -29,6 +30,7 @@ public class LeakyDoor : MonoBehaviour
     {
         transform.DOMoveX(transform.position.x - moveDistance, moveDuration);
         TurnOffColumns();
+        isCloset = false;
     }
     private void TurnOffColumns()
     {
@@ -37,4 +39,10 @@ public class LeakyDoor : MonoBehaviour
             col.isActivated = false;
         }
     }
+    public void CloseDoor()
+    {
+        transform.DOMoveX(transform.position.x + moveDistance, moveDuration);
+        isCloset = true;
+    }
+
 }

@@ -9,11 +9,13 @@ public class Column : MonoBehaviour
     [SerializeField] private bool isCowColumn;
     [SerializeField] private bool isPigColumn;
     [SerializeField] private GameObject headGameObject;
-    [SerializeField] private string warningText;
+    [SerializeField] private string haveNoHeadText;
+    [SerializeField] private string differentHeadText;
     private bool isTriggered;
     private BlinkingText blinkingText;
     private bool addItemAble;
     private Inventory inventory;
+    private bool triggerScriptIsDestroyed = false;
     private void Start()
     {
         headGameObject.SetActive(false);
@@ -29,37 +31,54 @@ public class Column : MonoBehaviour
     }
     private void ColumnTrigger() 
     {
+        if(isActivated == false)
         if (isGoatColumn && inventory.goatIsExisting)
         {
             isActivated = true;
             headGameObject.SetActive(true);
             inventory.RemoveItem(inventory.goatIndex);
+            Destroy(GetComponent<TriggerObject>());
+            triggerScriptIsDestroyed = true;
         }
         else if (isCowColumn && inventory.cowIsExisting)
         {
             isActivated = true;
             headGameObject.SetActive(true);
             inventory.RemoveItem(inventory.cowIndex);
+            Destroy(GetComponent<TriggerObject>());
+                triggerScriptIsDestroyed = true;
         }
         else if (isPigColumn && inventory.pigIsExisting)
         {
             isActivated = true;
             headGameObject.SetActive(true);
             inventory.RemoveItem(inventory.pigIndex);
+            Destroy(GetComponent<TriggerObject>());
+            triggerScriptIsDestroyed = true;
+        }
+        else if (!inventory.pigIsExisting && !inventory.goatIsExisting && !inventory.cowIsExisting )
+        {
+            if (triggerScriptIsDestroyed == false)
+                {
+                    blinkingText.Blink(haveNoHeadText);
+                }
         }
         else 
         {
-            blinkingText.Blink(warningText);
+                if (triggerScriptIsDestroyed == false)
+                {
+                    blinkingText.Blink(differentHeadText);
+                }
         }
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<Player>(out Player player))
         {
             isTriggered = true;
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent<Player>(out Player player))
         {
