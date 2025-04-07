@@ -12,7 +12,11 @@ public class LockCode : MonoBehaviour
     public bool codeIsCorrect = false;
     public AudioClip correctCodeClip;
     public AudioClip incorrectCodeClip;
-
+    private AudioSource audioSource;
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         if (gameObject.activeSelf == true)
@@ -38,7 +42,7 @@ public class LockCode : MonoBehaviour
         {
             if (lockers[i].currentNumber != correctCode[i])
             {
-                Debug.Log("Неправильный код");
+                audioSource.PlayOneShot(incorrectCodeClip);
                 return;
             }
         }
@@ -52,6 +56,7 @@ public class LockCode : MonoBehaviour
         {
             lockerDoors[i].OpenDoor();
         }
+        audioSource.PlayOneShot(correctCodeClip);
         codeIsCorrect = true;
 
 

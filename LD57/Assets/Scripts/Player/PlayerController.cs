@@ -3,23 +3,41 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private AudioClip runSound;
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
     private bool isFacingRight = true;
     private Animator anim;
+    private AudioSource audioSource;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput.normalized * speed;
-
+        if (moveInput.x != 0 || moveInput.y != 0)
+        {
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = runSound;
+                audioSource.loop = true;
+                audioSource.Play();
+            }
+        }
+        else
+        {
+            if (audioSource.isPlaying)
+            {
+                audioSource.Stop();
+            }
+        }
         if (moveInput.y == 0 && moveInput.x == 0)
         {
             anim.SetInteger("State", 0);

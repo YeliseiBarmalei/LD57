@@ -6,9 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MenuesAndCutsenes/StartCredits.unity
+    guid: 230cca9de570c554c840ad83a193c6c9
+  - enabled: 1
     path: Assets/Scenes/MenuesAndCutsenes/MainMenu.unity
     guid: d3b2b80a9fe6d244f8d516c85882c025
   - enabled: 1
+    path: Assets/Scenes/MenuesAndCutsenes/StartCutscene.unity
+    guid: 9aafab23e9539114b81a75a3b24a4eff
+  - enabled: 1
     path: Assets/Scenes/Main/MainScene/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MenuesAndCutsenes/Ending.unity
+    guid: 758ff9a6314f261409d34ac501401fef
+  - enabled: 1
+    path: Assets/Scenes/MenuesAndCutsenes/Tutorial.unity
+    guid: afee4d0f669521444b58ce1bbdca9d98
   m_configObjects: {}

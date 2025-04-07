@@ -21,4 +21,5 @@ public class DistanceSound2D : MonoBehaviour
         float volume = 0.65f - Mathf.Clamp01(distance / maxDistance);
         audioSource.volume = volume;
     }
+
 }

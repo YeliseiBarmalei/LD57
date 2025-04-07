@@ -15,7 +15,7 @@ public class Lock : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && isAbleToOpenPanel)
         {
-            lockUI.SetActive(!lockUI.activeSelf);
+            lockUI.SetActive(true);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

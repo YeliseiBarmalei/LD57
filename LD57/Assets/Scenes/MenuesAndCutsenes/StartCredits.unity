@@ -229,7 +229,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 55cd925c62d2d0f4dac14f7fc2d488c7, type: 3}
+    m_Font: {fileID: 12800000, guid: 6828afb51be4f374ab8277712ec22062, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 1
@@ -241,7 +241,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Created by\n Pixel Rat Team"
+  m_Text: Created by Artel
 --- !u!222 &73452552
 CanvasRenderer:
   m_ObjectHideFlags: 0
