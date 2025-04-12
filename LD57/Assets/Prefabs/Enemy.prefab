@@ -106,8 +106,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   audioClip: {fileID: 8300000, guid: d28868f999d30e34bbe22493c3387647, type: 3}
+  audioSource: {fileID: 0}
   target: {fileID: 0}
   agent: {fileID: 0}
+  damageCooldown: 1
 --- !u!114 &-3215620244901578387
 MonoBehaviour:
   m_ObjectHideFlags: 0

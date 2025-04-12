@@ -10,18 +10,25 @@ public class Enemy : MonoBehaviour
     public AudioSource audioSource;
     public Transform target;
     public NavMeshAgent agent;
+
     private Vector3 originalScale;
+
+    [Header("Damage Settings")]
+    [SerializeField] private float damageCooldown = 1.5f;
+    private float nextTimeToDamage = 0f;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         target = FindAnyObjectByType<PlayerController>().transform;
         agent = GetComponent<NavMeshAgent>();
-        agent.updateRotation= false;
+        agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.speed = speed;
         originalScale = transform.localScale;
     }
-    private void Update()
+
+    void Update()
     {
         Vector3 direction = target.position - transform.position;
 
@@ -29,43 +36,28 @@ public class Enemy : MonoBehaviour
             transform.localScale = originalScale;
         else if (direction.x < -0.1f)
             transform.localScale = new Vector3(-originalScale.x, originalScale.y, originalScale.z);
-
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        TryDamage(collision);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        TryDamage(collision);
+    }
+
+    private void TryDamage(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out Player player))
         {
-            player.currentHp--;
-            audioSource.PlayOneShot(audioClip);
+            if (Time.time >= nextTimeToDamage)
+            {
+                player.currentHp--;
+                audioSource.PlayOneShot(audioClip);
+                nextTimeToDamage = Time.time + damageCooldown;
+            }
         }
-        //if (collision.TryGetComponent(out PlayerController player))
-        //{
-        //    audioSource.Play();
-        //}
     }
-    //private void OnTriggerStay2D(Collider2D collision)
-    //{
-    //    if (collision.TryGetComponent(out PlayerController player)) 
-    //    {
-    //        //audioSource.volume += Time.deltaTime / 5;
-    //        agent.speed = speed;
-    //        if (agent.isOnNavMesh)
-    //        {
-    //            agent.SetDestination(target.position);
-    //        }
-    //        else
-    //        {
-    //            Debug.LogWarning("Агент не на NavMesh!");
-    //        }
-
-    //    }
-    //}
-    //private void OnTriggerExit2D(Collider2D collision)
-    //{
-    //    if (collision.TryGetComponent(out PlayerController player))
-    //    {
-    //        //audioSource.volume = 0;
-    //        audioSource.Stop();
-    //    }
-    //}
 }

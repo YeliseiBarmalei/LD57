@@ -483,10 +483,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfe52c3305cb9064b9d3d18fbcb97d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 10
-  currentHp: 10
+  maxHp: 15
+  currentHp: 15
   eButton: {fileID: 292078897}
-  numberOfFuel: 25
+  numberOfFuel: 20
   hpText: {fileID: 1482901405}
 --- !u!95 &46419614
 Animator:
